@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio profesional de Felipe Brenes, desarrollador de software."
+    />
+    <title>Felipe Brenes | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <script src="./src/scripts/main.js" defer></script>
+  </head>
+  <body>
+    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Cambiar idioma">EN</button>
+    <div class="container">
+    <div class="space space-1"></div>
+    <div class="space space-2"></div>
+    <div class="space space-3"></div>
+    </div>
+  
+    <main aria-label="Portfolio de desarrollador">
+      <div class="portfolio">
+        <header class="hero">
+          <div class="avatar" aria-hidden="true">FB</div>
+
+          <div class="hero__content">
+            
+            <h1>Felipe Brenes Conejo</h1>
+            <p class="role" data-i18n="role">Ingeniero de Software Junior · Full Stack</p>
+            <p class="location">
+              <span data-icon="map-pin"></span>
+              <span data-i18n="location">Alajuela, Costa Rica</span>
+            </p>
+            <nav class="social-links" aria-label="Contacto principal">
+              <div class="pill pill--primary email-block">
+                <span class="email-text">felipebrenes721@gmail.com</span>
+                <button class="email-copy" type="button" data-copy="felipebrenes721@gmail.com" aria-label="Copiar correo">
+                  <span data-icon="copy"></span>
+                </button>
+              </div>
+              <div class="social-icon-row">
+                <a class="icon-link cv-link" href="./assets/Felipe_Brenes_CV.pdf" download aria-label="Descargar CV">
+                  <span data-icon="file-text"></span>
+                  <span class="icon-link__label">CV</span>
+                </a>
+                <a class="icon-link" href="https://github.com/developerFrey" target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <span data-icon="github"></span>
+                </a>
+                <a class="icon-link" href="https://www.linkedin.com/in/felipe-brenes-conejo-5b7981243/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <span data-icon="linkedin"></span>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <section class="section" aria-labelledby="about-title">
+          <h2 id="about-title" data-i18n="about">Sobre mí</h2>
+          <p data-i18n="aboutText">
+            Soy una persona apasionada por la tecnologia, la musica y los deportes, me gusta crear interfaces limpias,
+            aplicaciones mantenibles y resolver problemas. Me gusta trabajar
+            con código claro, buenas prácticas y una experiencia de usuario bien cuidada.
+          </p>
+        </section>
+
+        <section class="section section--divided" aria-labelledby="tech-title">
+          <h2 id="tech-title" data-i18n="technology">Tecnologías</h2>
+          <div class="tag-list" id="technologies"></div>
+        </section>
+
+        <section class="section" aria-labelledby="experience-title">
+          <h2 id="experience-title" data-i18n="experience">Experiencia</h2>
+          <div class="timeline" id="experience"></div>
+        </section>
+
+        <section class="section" aria-labelledby="projects-title">
+          <h2 id="projects-title" data-i18n="projects">Proyectos</h2>
+          <div class="projects" id="projects"></div>
+        </section>
+
+        <section class="section" aria-labelledby="education-title">
+          <h2 id="education-title" data-i18n="education">Formación</h2>
+          <div class="timeline" id="education"></div>
+        </section>
+
+<footer class="footer section" aria-labelledby="contact-title">
+          <h2 id="contact-title" data-i18n="contact">Contacto</h2>
+          <div>
+            
+            <nav class="social-links" aria-label="Contacto secundario">
+              <div class="pill pill--primary email-block">
+                <span class="email-text">felipebrenes721@gmail.com</span>
+                <button class="email-copy" type="button" data-copy="felipebrenes721@gmail.com" aria-label="Copiar correo">
+                  <span data-icon="copy"></span>
+                </button>
+              </div>
+              <div class="social-icon-row">
+                <a class="icon-link cv-link" href="./assets/Felipe_Brenes_CV.pdf" download aria-label="Descargar CV">
+                  <span data-icon="file-text"></span>
+                  <span class="icon-link__label">CV</span>
+                </a>
+                <a class="icon-link" href="https://github.com/developerFrey" target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <span data-icon="github"></span>
+                </a>
+                <a class="icon-link" href="https://www.linkedin.com/in/felipe-brenes-conejo-5b7981243/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <span data-icon="linkedin"></span>
+                </a>
+              </div>
+            </nav>
+            
+          </div>
+          <p>&copy; Felipe Brenes Conejo - 2026</p>
+        </footer>
+        
+      </div>
+    </main>
+  </body>
+</html>
