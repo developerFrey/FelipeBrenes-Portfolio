@@ -37,11 +37,11 @@ const content = {
     projects: [
       {
         title: "Hotel Management Platform",
-        subtitle: "Aplicación web",
+        subtitle: "Aplicación Web",
         description: "Aplicación de gestión hotelera con arquitectura MVC: CRUD de clientes, empleados, habitaciones y reservas, validación en el servidor y modelo de datos relacional con SQL Server.",
         tags: ["C#", "ASP.NET MVC", "SQL Server"],
         icon: "hotel-bed-5-flat",
-        demoUrl: "#",
+        demoUrl: "https://unedcr-my.sharepoint.com/:v:/g/personal/felipe_brenes_uned_cr/IQBtRNNWjdPyQ4oO8qr9KN9JAUzXfC91BBw7GZb_k8l-tt0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jbn4RQ",
         repoUrl: "https://github.com/developerFrey/HotelManagement-Project",
       },
       {
@@ -50,23 +50,22 @@ const content = {
         description: "Analizador léxico, sintáctico y semántico en Java con reconocimiento de tokens y detección de errores léxicos, sintácticos y semánticos en estructuras de código fuente de visual basic.",
         tags: ["Java"],
         icon: "compiler-explorer",
-        demoUrl: "#",
         repoUrl: "https://github.com/developerFrey/JavaCompiler-Project",
       },
       {
-        title: "Infraestructura de red empresarial",
-        subtitle: "Cisco IOS · GNS3",
-        description: "Diseño y configuración de un entorno de red con VLANs, DHCP, IPv6 y router-on-a-stick, validando la conectividad entre segmentos en GNS3.",
-        tags: ["Cisco IOS", "GNS3"],
+        title: "Bribri Cultural Tours",
+        subtitle: "Sitio Web",
+        description: "Diseño y desarrollo de un sitio web para promocionar tours culturales en la comunidad de Bribri, incluyendo información sobre actividades, rutas y reservas.",
+        tags: ["HTML5", "CSS3", "TypeScript"],
         icon: "cics-program",
-        demoUrl: "#",
-        repoUrl: "#",
+        demoUrl: "https://bribriculturaltours.com/",
+        repoUrl: "https://github.com/developerFrey/BribriCulturalTours",
       },
     ],
     education: [
       {
         title: "Ingeniería en Informática",
-        subtitle: "UNED · Bachillerato universitario",
+        subtitle: "UNED · Bachillerato Universitario",
         description: "Formación en programación, bases de datos, redes y ciclo de vida del desarrollo de software. Incluye diplomado en Tecnologías de la Información.",
         date: "2024 - Esperado 2026",
       },
@@ -120,7 +119,7 @@ const content = {
         description: "Hotel management application built with MVC architecture: CRUD for customers, employees, rooms and reservations, server-side validation and a relational data model with SQL Server.",
         tags: ["C#", "ASP.NET MVC", "SQL Server"],
         icon: "hotel-bed-5-flat",
-        demoUrl: "#",
+        demoUrl: "https://unedcr-my.sharepoint.com/:v:/g/personal/felipe_brenes_uned_cr/IQBtRNNWjdPyQ4oO8qr9KN9JAUzXfC91BBw7GZb_k8l-tt0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jbn4RQ",
         repoUrl: "https://github.com/developerFrey/HotelManagement-Project",
       },
       {
@@ -133,13 +132,13 @@ const content = {
         repoUrl: "https://github.com/developerFrey/JavaCompiler-Project",
       },
       {
-        title: "Enterprise network infrastructure",
-        subtitle: "Cisco IOS · GNS3",
-        description: "Design and configuration of a network environment with VLANs, DHCP, IPv6 and router-on-a-stick, validating connectivity between segments in GNS3.",
-        tags: ["Cisco IOS", "GNS3"],
+        title: "Bribri Cultural Tours",
+        subtitle: "Website",
+        description: "Design and development of a website to promote cultural tours in the Bribri community, including information about activities, routes and reservations.",
+        tags: ["HTML5", "CSS3", "TypeScript"],
         icon: "cics-program",
-        demoUrl: "#",
-        repoUrl: "#",
+        demoUrl: "https://bribriculturaltours.com/",
+        repoUrl: "https://github.com/developerFrey/BribriCulturalTours",
       },
     ],
     education: [
@@ -218,6 +217,11 @@ const createProject = (project) => {
   const preview = project.icon
     ? `<img class="project__preview__icon" src="./assets/icons/${project.icon}.svg" alt="" />`
     : "FB";
+  const demoLink = project.demoUrl && project.demoUrl !== "#"
+    ? `<a class="icon-link" href="${project.demoUrl}" target="_blank" rel="noreferrer" aria-label="Ver sitio web de ${project.title}">
+          <span data-icon="link"></span>
+        </a>`
+    : "";
   return `
   <article class="project">
     <span class="dot" aria-hidden="true"></span>
@@ -229,9 +233,7 @@ const createProject = (project) => {
         ${project.tags.map((tag) => `<span class="project__tag">${tag}</span>`).join("")}
       </div>
       <div class="item__links">
-        <a class="icon-link" href="${project.demoUrl}" aria-label="Ver demo de ${project.title}">
-          <span data-icon="link"></span>
-        </a>
+        ${demoLink}
         <a class="icon-link" href="${project.repoUrl}" target="_blank" rel="noreferrer" aria-label="Ver repositorio de ${project.title}">
           <span data-icon="github"></span>
         </a>
