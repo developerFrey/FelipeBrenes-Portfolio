@@ -28,7 +28,7 @@ const content = {
     ],
     experience: [
       {
-        title: "Software QA Tester & Camera Calibrator",
+        title: "Software Tester & Calibrador de Cámaras",
         subtitle: "Bounce Imaging",
         description: "Pruebas manuales y funcionales de los productos y de las aplicaciones que los controlan IOS y Android, ejecución de planes y casos de prueba, análisis y reporte de defectos, trabajando en conjunto con el equipo de desarrollo.",
         date: "2023 - Actualidad",
@@ -36,7 +36,7 @@ const content = {
     ],
     projects: [
       {
-        title: "Hotel Management Platform",
+        title: "Aplicación de Gestión Hotelera",
         subtitle: "Aplicación Web",
         description: "Aplicación de gestión hotelera con arquitectura MVC: CRUD de clientes, empleados, habitaciones y reservas, validación en el servidor y modelo de datos relacional con SQL Server.",
         tags: ["C#", "ASP.NET MVC", "SQL Server"],
@@ -106,7 +106,7 @@ const content = {
     ],
     experience: [
       {
-        title: "Software QA Tester & Camera Calibrator",
+        title: "Software Tester & Camera Calibrator",
         subtitle: "Bounce Imaging",
         description: "Manual and functional testing of the products and the iOS and Android apps that control them, execution of test plans and cases, analysis and reporting of defects, working together with the development team.",
         date: "2023 - Present",
