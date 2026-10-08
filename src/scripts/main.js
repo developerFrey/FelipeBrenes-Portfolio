@@ -258,7 +258,14 @@ const setLanguage = (lang) => {
   const data = content[lang];
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const value = data.strings[element.dataset.i18n];
-    if (value) element.textContent = value;
+    if (!value) return;
+
+    if (element.classList.contains("role") && /\bFull\b/i.test(value)) {
+      element.innerHTML = value.replace(/\bFull\b/i, '<span class="role__highlight">Full</span>');
+      return;
+    }
+
+    element.textContent = value;
   });
   mount("#technologies", data.technologies.map(createTechnology).join(""));
   mount("#experience", data.experience.map(createTimelineItem).join(""));

@@ -71,21 +71,30 @@ main {
 
 .portfolio {
   width: min(1000px, 100%);
-  margin: 0 auto;
-  padding: 62px 24px 62px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: auto;
+  padding: 80px;
+  background: rgba(0 0 0 / 50%);
+  border-radius: 15px;
 }
 
 .hero {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: minmax(170px, 220px) 1fr;
+  column-gap: 10px;
+  align-items: start;
   margin-bottom: 40px;
   text-align: center;
 }
 
 .hero .social-links {
   justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.hero .social-icon-row {
+  flex-wrap: nowrap;
 }
 
 .hero .location {
@@ -94,6 +103,7 @@ main {
 
 .avatar {
   display: grid;
+  justify-self: center;
   flex: 0 0 auto;
   width: 116px;
   height: 116px;
@@ -153,6 +163,10 @@ h2 {
   font-weight: 700;
 }
 
+.role__highlight {
+  color: var(--teal-soft);
+}
+
 .location,
 .section p,
 .item__subtitle,
@@ -175,6 +189,25 @@ h2 {
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+}
+
+.footer .social-links {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer .social-links .social-icon-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer .social-links .email-block {
+  flex-shrink: 0;
 }
 
 .tag-list {
@@ -493,6 +526,11 @@ h2 {
     column-gap: 8px;
   }
 
+  .hero {
+    grid-template-columns: minmax(130px, 170px) 1fr;
+    column-gap: 8px;
+  }
+
   .tag-list {
     grid-template-columns: repeat(4, auto);
   }
@@ -520,6 +558,7 @@ h2 {
 
   .hero {
     display: grid;
+    grid-template-columns: 1fr;
     justify-items: center;
   }
 
@@ -550,14 +589,36 @@ h2 {
     grid-template-columns: repeat(3, auto);
   }
 
-  .social-links .icon-link {
+  .social-links,
+  .hero .social-links,
+  .footer .social-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .social-links .email-block,
+  .hero .social-links .email-block,
+  .footer .social-links .email-block {
+    width: min(100%, 360px);
+    justify-content: space-between;
+  }
+
+  .social-links .social-icon-row,
+  .hero .social-links .social-icon-row,
+  .footer .social-links .social-icon-row {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-links .icon-link,
+  .hero .social-links .icon-link,
+  .footer .social-links .icon-link {
     width: 92px;
     height: 42px;
     font-size: 1.5rem;
-  }
-
-  .social-links {
-    gap: 7px;
   }
 
   .lang-toggle {
